@@ -20,9 +20,9 @@ const registerUser = async(req, res)=>{
         const saveUser = new userModel(req.body);
         const user = saveUser.save();
 
-        const token = jwt.sign({username: saveUser.username, id: saveUser._id}, "thisisasecretkey");
+        // const token = jwt.sign({username: saveUser.username, id: saveUser._id}, "thisisasecretkey");
 
-        return res.status(200).json({token, saveUser});
+        return res.status(200).json({saveUser});
     } catch (error) {
         console.log(error);
         res.status(500).json({message: error.messgae})
