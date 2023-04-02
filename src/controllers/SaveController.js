@@ -2,7 +2,7 @@ const userModel = require('../models/userModel.js')
 const cookieParser = require('cookie-parser')
 const authen = require('../middleware/Authen.js')
 
-const saveNotes = async(req, res, )=>{
+const saveNotes = async(req, res, )=>{ 
     console.log("hi")
     const fileName = req.body.fileName;
     const content = req.body.content;
